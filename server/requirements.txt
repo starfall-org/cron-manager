@@ -1,0 +1,4 @@
+SQLModel
+psycopg2-binary
+fastapi
+requests

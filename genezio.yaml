@@ -1,0 +1,38 @@
+name: cron-manager
+region: us-east-1
+yamlVersion: 2
+services:
+  databases:
+    - name: cron
+      type: postgres-neon
+  crons:
+    - name: main-cron
+      function: ${{backend.functions.fastapi.name}}
+      schedule: "* * * * *"
+      endpoint: "api/ping"
+frontend:
+  path: client
+  publish: dist
+  subdomain: monitor
+  scripts:
+    deploy:
+      - npm install
+    build:
+      - npm run build
+    start:
+      - npm install
+      - npm run dev
+  environment:
+    VITE_API_URL_FASTAPI: ${{ backend.functions.fastapi.url }}
+backend:
+  path: server
+  language:
+    name: python
+    packageManager: pip
+    runtime: python3.12.x
+  functions:
+    - name: fastapi
+      path: .
+      handler: app
+      entry: main.py
+      type: httpServer
