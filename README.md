@@ -75,10 +75,12 @@ Contributions are welcome. Please create issues or pull requests to contribute t
 
 ## Tech Stack
 
-<img src="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg" width="20">
-<img src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="20">
-<img src="https://vitejs.dev/logo.svg" width="20">
-<img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="20">
+<div style="display: flex; align-items: center; gap: 10px;">
+    <img src="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg" width="20">
+    <img src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="20">
+    <img src="https://vitejs.dev/logo.svg" width="20">
+    <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="20">
+</div>
 
 ## License
 
