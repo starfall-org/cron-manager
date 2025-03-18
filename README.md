@@ -11,27 +11,38 @@ This application enables users to create, manage, and schedule automated tasks t
 The project is divided into two main parts:
 
 - **Client**: User interface built with Svelte + TypeScript + Vite
-- **Server**: Backend handling cron job management logic
+- **Server**: Backend handling cron job management logic using FastAPI
 
 ## Installation and Setup
 
 ### System Requirements
+
+- Python 3.10+
 - Node.js (latest version)
 - npm or yarn
 
 ### Setup
+
 1. Clone repository:
+
 ```bash
-git clone https://github.com/your-username/cron-manager.git
+git clone https://github.com/starfall-org/cron-manager.git
 ```
 
 2. Install dependencies:
+
 ```bash
+# frontend
 cd cron-manager
+cd client
 npm install
+# backend
+cd ../server
+pip install -r requirements.txt
 ```
 
 3. Run in development mode:
+
 ```bash
 npm run dev
 ```
@@ -45,7 +56,7 @@ Deploy this application to Genezio with one click:
 ## Tech Stack
 
 - **Frontend**: Svelte, TypeScript, Vite
-- **Backend**: Node.js
+- **Backend**: FastAPI
 - **Deployment**: Genezio
 
 ## Recommended Development Environment
