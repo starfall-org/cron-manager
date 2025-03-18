@@ -75,10 +75,10 @@ Contributions are welcome. Please create issues or pull requests to contribute t
 
 ## Tech Stack
 
-![Svelte](https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg)
-![TypeScript](https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png)
-![Vite](https://vitejs.dev/logo.svg)
-![FastAPI](https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png)
+<img src="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg" width="20">
+<img src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="20">
+<img src="https://vitejs.dev/logo.svg" width="20">
+<img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="20">
 
 ## License
 
