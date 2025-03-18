@@ -73,6 +73,13 @@ Deploy this application to Genezio with one click:
 
 Contributions are welcome. Please create issues or pull requests to contribute to the project.
 
+## Tech Stack
+
+<img src="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg" width="20" height="20"> [Svelte](https://svelte.dev/)
+<img src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" width="20" height="20"> [TypeScript](https://www.typescriptlang.org/)
+<img src="https://vitejs.dev/logo.svg" width="20" height="20"> [Vite](https://vitejs.dev/)
+<img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="20" height="20"> [FastAPI](https://fastapi.tiangolo.com/)
+
 ## License
 
-[MIT License](LICENSE)
+[MIT](https://choosealicense.com/licenses/mit/)
