@@ -29,7 +29,7 @@ backend:
   language:
     name: python
     packageManager: pip
-    runtime: python3.12.x
+    runtime: python3.13.x
   functions:
     - name: fastapi
       path: .

@@ -1,4 +1,8 @@
-SQLModel
+sqlalchemy
+pydantic>=2.0
+typing_extensions>=4.7.0
 psycopg2-binary
-fastapi
+flask
 requests
+flask-cors
+alembic
