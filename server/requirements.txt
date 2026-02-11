@@ -1,7 +1,7 @@
 sqlalchemy
+sqlalchemy-libsql
 pydantic>=2.0
 typing_extensions>=4.7.0
-psycopg2-binary
 flask
 requests
 flask-cors
