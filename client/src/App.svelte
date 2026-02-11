@@ -50,7 +50,20 @@
     return entries.map(([key, value]) => ({key, value}));
   }
 
+  let notification = $state<{type: 'success' | 'error', message: string} | null>(null);
+
+  function showNotification(type: 'success' | 'error', message: string) {
+    notification = { type, message };
+    setTimeout(() => {
+      notification = null;
+    }, 3000);
+  }
+
   async function addLink() {
+    if (!newUrl.trim()) {
+      showNotification('error', 'Please enter a URL');
+      return;
+    }
     try {
       const headersObj = headersToObject(headerRows);
 
@@ -69,9 +82,19 @@
         newUrl = "";
         newId = "";
         headerRows = [{key: "", value: ""}];
+        
+        // Close dialog
+        const dialog = document.getElementById('add-url-dialog');
+        if(dialog) dialog.classList.add('hidden');
+        
+        // Show notification
+        showNotification('success', 'URL added successfully!');
+      } else {
+        showNotification('error', 'Failed to add URL');
       }
     } catch (error) {
       console.error(error);
+      showNotification('error', 'An error occurred');
     }
   }
 
@@ -139,6 +162,18 @@
   class="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 p-4 md:p-8"
   in:fade={{ duration: 300, easing: quintOut }}
 >
+  <!-- Notification -->
+  {#if notification}
+    <div
+      class="fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300"
+      class:bg-green-500={notification.type === 'success'}
+      class:bg-red-500={notification.type === 'error'}
+      in:scale={{ duration: 200, easing: quintOut }}
+    >
+      <span class="text-white font-medium">{notification.message}</span>
+    </div>
+  {/if}
+
   <div class="max-w-7xl mx-auto">
     <div class="flex justify-between items-center mb-6">
       <h1
